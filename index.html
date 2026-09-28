@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for standard text rendering -->
+  <meta charset="UTF-8">
+  
+  <!-- Responsive Viewport Meta Tag: Ensures the page scales correctly on all device widths (Desktop, Tablet, Mobile) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Browser Tab Metadata -->
+  <meta name="description" content="Personal portfolio of [YOUR NAME] - Computer Science Student and Aspiring Software Developer. Built with pure semantic HTML5 and CSS3.">
+  <title>Hitesh Ram | Portfolio - Aspiring Software Developer</title>
+  
+  <!-- External Stylesheet Link: Keeps presentation logic cleanly decoupled from HTML structure -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. NAVIGATION HEADER (Semantic <header> & <nav>)
+       Uses sticky positioning and CSS Flexbox for alignment.
+       During VIVA: Explain why <header> and <nav> are semantic HTML5 tags.
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Personal Logo / Name Anchor -->
+      <a href="#home" class="logo" aria-label="Home">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span>HITESH RAM ROYAL</span>
+      </a>
+
+      <!-- Primary Navigation Links (Smooth scrolling via CSS scroll-behavior: smooth) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT CONTAINER (Semantic <main>)
+       Wraps all primary sections of the document.
+       ====================================================================== -->
+  <main>
+
+    <!-- ====================================================================
+         2. HERO SECTION
+         Provides immediate professional introduction, calls to action, and avatar.
+         ==================================================================== -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-wrapper">
+        
+        <!-- Hero Text & Action Column -->
+        <div class="hero-content">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 id="hero-heading" class="hero-name">Hitesh Ram</h1>
+          <h2 class="hero-title">Computer Science Student &amp; Aspiring Software Developer</h2>
+          
+          <p class="hero-bio">
+            I am a passionate undergraduate computer science student who enjoys solving problems through clean, efficient code. 
+            Currently strengthening my fundamentals in core computer science, software engineering principles, and full-stack web development. 
+            Actively seeking internship and collaboration opportunities where I can learn, contribute, and build meaningful software solutions.
+          </p>
+
+          <!-- Primary Call to Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+
+          <!-- Professional Links -->
+          <div class="hero-socials">
+            <span>Connect:</span>
+            <!-- REPLACE: Update href values with your personal profile URLs -->
+            <a href="https://github.com/hiteshram-cpu" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub Profile">
+              GitHub ↗
+            </a>
+            <a href="https://linkedin.com/in/[YOUR-LINKEDIN-USERNAME]" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Profile">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Image Avatar Column -->
+        <div class="hero-image-wrapper">
+          <div class="profile-avatar-container">
+            <!-- 
+              PLACEHOLDER NOTE:
+              Replace 'images/profile-placeholder.svg' with your personal photo (e.g. 'images/profile.jpg').
+              Always keep the 'alt' text descriptive for accessibility!
+            -->
+            <img src="images/profile-placeholder.svg" alt="Portrait illustration representing Hitesh Ram" class="profile-avatar">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. ABOUT ME SECTION
+         Explains background, current studies, passions, and career direction.
+         ==================================================================== -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Background</span>
+          <h2 id="about-heading" class="section-title">About Me</h2>
+          <p class="section-subtitle">A quick introduction to my technical journey, academic background, and interests.</p>
+        </header>
+
+        <div class="about-grid">
+          
+          <!-- Card 1: Technical Journey -->
+          <article class="about-card">
+            <h3 class="about-card-title">🚀 My Journey</h3>
+            <p class="about-card-text">
+              My interest in technology started with curiosity about how software and websites work behind the scenes. 
+              Writing my first program sparked a passion for problem-solving and software design. Since then, I have been continuously 
+              building my foundation in algorithms, system concepts, and web fundamentals.
+            </p>
+          </article>
+
+          <!-- Card 2: Current Focus & Education -->
+          <article class="about-card">
+            <h3 class="about-card-title">🎓 Current Focus</h3>
+            <p class="about-card-text">
+              I am currently pursuing my degree in <strong>[YOUR DEGREE, e.g. B.Tech / B.S. in Computer Science]</strong> at 
+              <strong>[YOUR COLLEGE / UNIVERSITY NAME]</strong>. My coursework covers data structures, algorithms, object-oriented programming, 
+              and database systems, which I apply to hands-on practical projects.
+            </p>
+          </article>
+
+          <!-- Card 3: What I Enjoy & Future Goals -->
+          <article class="about-card">
+            <h3 class="about-card-title">💡 Interests &amp; Aspirations</h3>
+            <p class="about-card-text">
+              I enjoy designing clean user interfaces, structuring maintainable code, and learning modern development workflows. 
+              My future goal is to work as a professional software engineer where I can collaborate with talented teams and build 
+              impactful, user-centric software.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. SKILLS SECTION
+         Categorized skill areas displayed using CSS Grid.
+         ==================================================================== -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Core technologies and development tools I work with and study.</p>
+        </header>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Programming Languages -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">Programming Languages</h3>
+            <div class="skill-tags">
+              <!-- Real known languages (Update as you learn!) -->
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">C / C++</span>
+              <!-- Future placeholders: Add/remove according to your actual skillset -->
+              <span class="skill-badge skill-badge-placeholder">[Python - Learning]</span>
+            </div>
+          </article>
+
+          <!-- Category 2: Web Development -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">Web Development</h3>
+            <div class="skill-tags">
+              <span class="skill-badge">HTML5 (Semantic)</span>
+              <span class="skill-badge">CSS3 (Flexbox &amp; Grid)</span>
+              <span class="skill-badge">Responsive Web Design</span>
+              <!-- Future placeholders -->
+              <span class="skill-badge skill-badge-placeholder">[JavaScript - Learning]</span>
+            </div>
+          </article>
+
+          <!-- Category 3: Developer Tools & Version Control -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">Tools &amp; Environments</h3>
+            <div class="skill-tags">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Command Line / Terminal</span>
+            </div>
+          </article>
+
+          <!-- Category 4: Core Computer Science Fundamentals -->
+          <article class="skill-category-card">
+            <h3 class="skill-category-title">CS Fundamentals</h3>
+            <div class="skill-tags">
+              <span class="skill-badge">Object-Oriented Programming (OOP)</span>
+              <span class="skill-badge">Data Structures</span>
+              <span class="skill-badge">Algorithms</span>
+              <span class="skill-badge">[DBMS / SQL - Coursework]</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. PROJECTS SECTION
+         One of the most important sections for recruitment and VIVA reviews.
+         Uses CSS Grid with flexible, responsive project cards.
+         ==================================================================== -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Portfolio Work</span>
+          <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Practical applications and projects showcasing problem-solving and software design.</p>
+        </header>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT CARD 1: Personal Portfolio Website -->
+          <article class="project-card">
+            <div>
+              <span class="project-badge-type">Web Development</span>
+              <h3 class="project-title">Personal Developer Portfolio</h3>
+              <p class="project-description">
+                A responsive personal portfolio website built with pure semantic HTML5 and modern CSS3, adhering to high accessibility and clean code standards.
+              </p>
+              
+              <div class="project-problem-box">
+                <span class="project-problem-label">Problem It Solves:</span>
+                Provides an accessible, fast-loading, zero-dependency personal website to present academic credentials, technical skills, and projects to recruiters and evaluators.
+              </div>
+
+              <div class="project-tech-stack" aria-label="Technologies used">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Flexbox</span>
+                <span class="tech-pill">CSS Grid</span>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <!-- REPLACE: Add your actual repository link when uploaded -->
+              <a href="https://github.com/[YOUR-GITHUB-USERNAME]/portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">GitHub Code ↗</a>
+              <a href="#home" class="btn btn-sm btn-secondary">Live Demo ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT CARD 2: Starter / Academic Application Placeholder -->
+          <article class="project-card">
+            <div>
+              <span class="project-badge-type">Academic Project</span>
+              <h3 class="project-title">[Project 2: Student Portal]</h3>
+              <p class="project-description">
+                A responsive college student portal that allows students to view their profile and skills, check their weekly class schedule, and register for courses.
+              </p>
+              
+              <div class="project-problem-box">
+                <span class="project-problem-label">Problem It Solves:</span>
+                Provides students with a simple interface to access important academic information and manage course registration in one place.
+              </div>
+
+              <div class="project-tech-stack" aria-label="Technologies used">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Flexbox</span>
+                <span class="tech-pill">CSS Grid</span>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <!-- REPLACE: Add your actual project links or leave as placeholder -->
+              <a href="https://github.com/hiteshram-cpu/Student-Portal" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">GitHub Code ↗</a>
+              <span class="btn btn-sm btn-secondary" style="opacity: 0.6; cursor: default;">Demo (Console)</span>
+            </div>
+          </article>
+
+          <!-- PROJECT CARD 3: Algorithm / Tool Project Placeholder -->
+          <article class="project-card">
+            <div>
+              <span class="project-badge-type">Algorithm &amp; Tools</span>
+              <h3 class="project-title">[Project 3: Algorithm Visualizer / Tool]</h3>
+              <p class="project-description">
+                An interactive application to demonstrate how core searching and sorting algorithms operate step-by-step with custom user inputs.
+              </p>
+              
+              <div class="project-problem-box">
+                <span class="project-problem-label">Problem It Solves:</span>
+                Helps computer science students understand abstract algorithmic mechanics and time complexities through visual comparison and step execution.
+              </div>
+
+              <div class="project-tech-stack" aria-label="Technologies used">
+                <span class="tech-pill">Java / C++</span>
+                <span class="tech-pill">Algorithms</span>
+                <span class="tech-pill">GUI / CLI</span>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <!-- REPLACE: Add your actual project links or leave as placeholder -->
+              <a href="https://github.com/[YOUR-GITHUB-USERNAME]/algorithm-tool" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">GitHub Code ↗</a>
+              <span class="btn btn-sm btn-secondary" style="opacity: 0.6; cursor: default;">In Progress</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. EDUCATION SECTION
+         Structured card layout highlighting degrees, institutions, and coursework.
+         ==================================================================== -->
+    <section id="education" class="section section-alt" aria-labelledby="education-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Academics</span>
+          <h2 id="education-heading" class="section-title">Education</h2>
+          <p class="section-subtitle">Formal academic background and relevant coursework in computer science.</p>
+        </header>
+
+        <div class="timeline-container">
+          
+          <!-- Degree Card -->
+          <article class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">[Bachelor of Science in Computer Science &amp; Engineering]</h3>
+                <p class="timeline-institution">Birla Institute of Technology & Science, Pilani (BITS Pilani)</p>
+              </div>
+              <span class="timeline-badge">2030</span>
+            </div>
+            
+            <p class="timeline-details">
+              <strong>Academic Focus:</strong> Core computer science principles, software engineering methodologies, data structures, and algorithms.
+            </p>
+
+            <div style="margin-top: 0.75rem;">
+              <strong style="font-size: 0.88rem; color: var(--text-main);">Relevant Coursework:</strong>
+              <div class="coursework-list">
+                <span class="coursework-badge">Data Structures &amp; Algorithms</span>
+                <span class="coursework-badge">Object-Oriented Programming (Java)</span>
+                <span class="coursework-badge">Database Management Systems</span>
+                <span class="coursework-badge">Operating Systems</span>
+                <span class="coursework-badge">Computer Networks</span>
+                <span class="coursework-badge">Web Technologies</span>
+              </div>
+            </div>
+          </article>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. EXPERIENCE SECTION
+         Structured for internships, academic clubs, freelance, or research.
+         Easy to customize or hide if you currently have no industry experience.
+         ==================================================================== -->
+    <section id="experience" class="section" aria-labelledby="experience-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Career Journey</span>
+          <h2 id="experience-heading" class="section-title">Experience &amp; Leadership</h2>
+          <p class="section-subtitle">Practical contributions, student leadership roles, and technical project experience.</p>
+        </header>
+
+        <div class="timeline-container">
+          
+          <!-- Experience Card 1: Student Technical Club / Community / Internship -->
+          <article class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">[Role Title, e.g. Technical Member / Web Developer Intern]</h3>
+                <p class="timeline-institution">[College Coding Club / Organization / Company Name]</p>
+              </div>
+              <span class="timeline-badge">[Month Year – Present / Month Year]</span>
+            </div>
+
+            <ul class="experience-list">
+              <li>Collaborated with peers to design, build, and maintain software projects and web pages.</li>
+              <li>Participated in code reviews, technical workshops, and team problem-solving sessions.</li>
+              <li>Applied Git and GitHub version control workflows to manage collaborative repositories and branch merges.</li>
+            </ul>
+          </article>
+
+          <!-- Experience Card 2: Academic / Personal Projects Milestone -->
+          <article class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">[Independent Developer &amp; Open Source Contributor]</h3>
+                <p class="timeline-institution">Self-Directed Learning &amp; Academic Practice</p>
+              </div>
+              <span class="timeline-badge">[Year – Present]</span>
+            </div>
+
+            <ul class="experience-list">
+              <li>Authored clean, documented solutions for fundamental algorithmic problems in Java and C++.</li>
+              <li>Engineered semantic, accessible front-end web templates using pure HTML5 and CSS3.</li>
+              <li>Actively documenting programming concepts and project milestones on personal GitHub repositories.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. CERTIFICATIONS & ACHIEVEMENTS SECTION
+         Showcases hackathons, courses, awards, or academic milestones.
+         ==================================================================== -->
+    <section id="certifications" class="section section-alt" aria-labelledby="certifications-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Recognition</span>
+          <h2 id="certifications-heading" class="section-title">Certifications &amp; Achievements</h2>
+          <p class="section-subtitle">Verified credentials, competitions, and academic milestones.</p>
+        </header>
+
+        <div class="achievements-grid">
+          
+          <!-- Achievement Card 1 -->
+          <article class="achievement-card">
+            <p class="achievement-year">[YEAR, e.g. 2024]</p>
+            <h3 class="achievement-title">[Certification Name, e.g. Java Programming Fundamentals]</h3>
+            <p class="achievement-issuer">[Issuing Organization, e.g. Coursera / Oracle / HackerRank]</p>
+            <p class="achievement-desc">Completed comprehensive coursework covering OOP principles, exception handling, data structures, and collection frameworks.</p>
+          </article>
+
+          <!-- Achievement Card 2 -->
+          <article class="achievement-card">
+            <p class="achievement-year">[YEAR, e.g. 2024]</p>
+            <h3 class="achievement-title">[Hackathon / Coding Competition Name]</h3>
+            <p class="achievement-issuer">[College / Tech Fest Name]</p>
+            <p class="achievement-desc">Collaborated in a team of students to ideate and build a software prototype within a 24-hour development sprint.</p>
+          </article>
+
+          <!-- Achievement Card 3 -->
+          <article class="achievement-card">
+            <p class="achievement-year">[YEAR, e.g. 2023]</p>
+            <h3 class="achievement-title">[Academic Merit / Workshop Certificate]</h3>
+            <p class="achievement-issuer">[Department of Computer Science]</p>
+            <p class="achievement-desc">Recognized for academic excellence or participation in technical workshops on web development and cloud fundamentals.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. CONTACT SECTION & ACCESSIBLE FORM
+         Provides direct contact links and a fully structured HTML5 form.
+         During VIVA: Explain form elements, labels, required attributes, and accessibility.
+         ==================================================================== -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 id="contact-heading" class="section-title">Contact Me</h2>
+          <p class="section-subtitle">Feel free to reach out for internship opportunities, collaborations, or questions.</p>
+        </header>
+
+        <div class="contact-layout">
+          
+          <!-- Left Column: Direct Contact Info Cards -->
+          <div class="contact-info">
+            <div class="contact-card">
+              
+              <!-- Email -->
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <div class="contact-item-details">
+                  <strong>Email</strong>
+                  <!-- REPLACE: Add your actual email -->
+                  <a href="mailto:[YOUR-EMAIL@EXAMPLE.COM]">hiteshramroyal06@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">🐙</span>
+                <div class="contact-item-details">
+                  <strong>GitHub</strong>
+                  <!-- REPLACE: Add your GitHub profile URL -->
+                  <a href="https://github.com/hiteshram-cpu" target="_blank" rel="noopener noreferrer">github.com/hiteshram-cpu</a>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">💼</span>
+                <div class="contact-item-details">
+                  <strong>LinkedIn</strong>
+                  <!-- REPLACE: Add your LinkedIn profile URL -->
+                  <a href="https://linkedin.com/in/[Hitesh Ram Royal]" target="_blank" rel="noopener noreferrer">linkedin.com/in/Hitesh RAm Royal</a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <div class="contact-item-details">
+                  <strong>Bengaluru</strong>
+                  <span>Bengaluru, Karnataka, INDIA</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Future-Proofing Note for Form Backend -->
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; padding: 0.5rem;">
+              💡 <em>Note: This form uses pure HTML5. When deploying to production, connect the action attribute to a free service like Formspree, Netlify Forms, or a custom backend server.</em>
+            </p>
+          </div>
+
+          <!-- Right Column: Semantic HTML5 Contact Form -->
+          <div class="contact-form-card">
+            <!-- 
+              Semantic Form:
+              - Method: POST
+              - Action: Set to '#' for this static demo version
+              - For production: action="https://formspree.io/f/your-form-id"
+            -->
+            <form action="#" method="POST" class="contact-form">
+              
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="sender-name" class="form-label">Your Name <span style="color: #ef4444;">*</span></label>
+                <input 
+                  type="text" 
+                  id="sender-name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="e.g. Alex Johnson" 
+                  required 
+                  autocomplete="name"
+                >
+              </div>
+
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="sender-email" class="form-label">Your Email <span style="color: #ef4444;">*</span></label>
+                <input 
+                  type="email" 
+                  id="sender-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. alex@example.com" 
+                  required 
+                  autocomplete="email"
+                >
+              </div>
+
+              <!-- Subject Input -->
+              <div class="form-group">
+                <label for="message-subject" class="form-label">Subject</label>
+                <input 
+                  type="text" 
+                  id="message-subject" 
+                  name="subject" 
+                  class="form-input" 
+                  placeholder="e.g. Internship Opportunity / Collaboration"
+                >
+              </div>
+
+              <!-- Message Textarea -->
+              <div class="form-group">
+                <label for="sender-message" class="form-label">Message <span style="color: #ef4444;">*</span></label>
+                <textarea 
+                  id="sender-message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Write your message here..." 
+                  required
+                ></textarea>
+                <span class="form-hint">Inputs with an asterisk (*) are required.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       10. FOOTER (Semantic <footer>)
+       Contains copyright, quick links, and a back-to-top anchor.
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>HITESH RAM ROYAL</h3>
+          <p>Computer Science Student &amp; Aspiring Software Developer</p>
+        </div>
+
+        <div class="footer-social-links" aria-label="Social Links">
+          <a href="https://github.com/hiteshram-cpu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/[YOUR-LINKEDIN-USERNAME]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:[YOUR-EMAIL@EXAMPLE.COM]">hiteshramroyal06@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hitesh Ram. Built with semantic HTML5 &amp; CSS3. All rights reserved.</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top of page">↑ Back to top</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
